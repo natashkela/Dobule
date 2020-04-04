@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="145px" height="146px" viewBox="0 0 145 146" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M24,0 L61.3340699,0 L61.3340699,0 L63.4867677,0 L64.4519307,0 L121,0 C134.254834,-2.4348735e-15 145,10.745166 145,24 L145,122 C145,135.254834 134.254834,146 121,146 L24,146 C10.745166,146 1.623249e-15,135.254834 0,122 L0,24 C-5.17596268e-15,10.745166 10.745166,-1.11784017e-15 24,0 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="145" height="146" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Food-Discover-(categories-with-listing)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-dasharray="6">
+        <g id="Food-Categories-+search-filed" transform="translate(-37.000000, -263.000000)" stroke="#3B5998" stroke-width="0.4">
+            <g id="Content" transform="translate(37.000000, 263.000000)">
+                <g id="Anything">
+                    <use id="Rectangle" mask="url(#mask-2)" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

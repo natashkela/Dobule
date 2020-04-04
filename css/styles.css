@@ -1,0 +1,389 @@
+/**==============================Table Of Contents Start===========================**/
+/**
+Font Imports
+Owl Carousel
+General Class Definitions
+Color Classes
+Media Queries
+**/
+/**==============================Table Of Contents End===========================**/
+/*-------------------------- Font Imports  Start -------------------------------*/
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url(https://fonts.gstatic.com/s/robotocondensed/v18/ieVi2ZhZI2eCN5jzbjEETS9weq8-33mZGCQYag.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(https://fonts.gstatic.com/s/robotocondensed/v18/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7CA.ttf) format('truetype');
+}
+/*-------------------------- Font Imports  End -------------------------------*/
+/*-------------------------- Font Class Definitions Start -----------------------*/
+.Roboto {
+  font-family: 'Roboto', sans-serif !important;
+}
+.RobotoCondensed {
+  font-family: "Roboto Condensed", sans-serif !important;
+}
+/*-------------------------- Font Class Definitions End -----------------------*/
+/*-------------------------- Color Definitions Start---------------------------*/
+.light-gray-1 {
+  color: #88888C;
+}
+.light-gray-2-bg {
+  background-color: rgba(85, 85, 85, 0.03);
+}
+.purple {
+  color: #3B5998;
+}
+/*-------------------------- Color Definitions End---------------------------*/
+/*-------------------------- General Tag Definitions Start ---------------------*/
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 300;
+  font-size: 14px;
+}
+html.modal-open,
+body.modal-open {
+  overflow: hidden;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  cursor: pointer;
+}
+input:focus {
+  outline: none;
+  box-shadow: none!important;
+}
+/*-------------------------- General Tag Definitions End ---------------------*/
+/*-------------------------- General Class Definitions Start --------------------*/
+.main-content {
+  width: 100%;
+  height: 100%;
+}
+.main-header {
+  padding: 20px 37px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 67px;
+  background-color: white;
+  z-index: 2;
+}
+.main-header .dobule-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-header .dobule-logo .dobule-text {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  margin-left: 10px;
+  font-weight: 100;
+}
+.main-header .dobule-logo .dobule-text.robotoCondensed {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-size: 14px;
+}
+.content-padding {
+  padding: 0 36px;
+}
+.hidden {
+  display: none!important;
+}
+.page-content {
+  padding-top: 67px;
+  padding-bottom: 80px;
+}
+.page-content.content-padding {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.bottom-menu {
+  position: fixed;
+  bottom: 0;
+  z-index: 20;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  padding: 0 36px;
+  width: 100%;
+  height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  border: 10px solid transparent;
+  border-image: url(../icons/border.svg);
+  border-image-repeat: round;
+  border-image-slice: 10%;
+  border-image-width: 20px;
+  border-image-outset: 0px;
+  border-radius: 37px;
+}
+.bottom-menu .menu-btn-container {
+  text-align: center;
+  padding: 17px;
+}
+.bottom-menu .menu-icon-text {
+  font-size: 10px;
+  font-weight: 100;
+}
+.bottom-menu .menu-icon-text.active {
+  color: #ff9500;
+}
+.search-container {
+  padding: 10px 26px;
+  background-color: rgba(85, 85, 85, 0.03);
+  border-radius: 27.5px;
+}
+.search-container .search-text {
+  border: none;
+  padding: 0px 0px 0px 6px;
+  margin-right: 10px;
+  background-color: transparent;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 300;
+  font-size: 14px;
+}
+.search-container .search-text::placeholder {
+  color: black;
+}
+.search-container .search-icon {
+  display: flex;
+  align-items: center;
+}
+.vertically_centered {
+  display: flex;
+  align-items: center;
+}
+.line-height-1 {
+  line-height: 1;
+}
+.line-height-20 {
+  line-height: 20px;
+}
+.padding-0 {
+  padding: 0!important;
+}
+.margin-top-10 {
+  margin-top: 10px;
+}
+.margin-top-15 {
+  margin-top: 15px;
+}
+.margin-top-30 {
+  margin-top: 30px;
+}
+.margin-top-35 {
+  margin-top: 35px;
+}
+.margin-top-40 {
+  margin-top: 40px;
+}
+.margin-top-60 {
+  margin-top: 60px;
+}
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+.margin-left-5 {
+  margin-left: 5px;
+}
+.font-11 {
+  font-size: 11px;
+}
+.font-12 {
+  font-size: 12px;
+}
+.font-14 {
+  font-size: 14px;
+}
+.font-15 {
+  font-size: 15px;
+}
+.font-16 {
+  font-size: 16px;
+}
+.font-20 {
+  font-size: 20px;
+}
+.font-weight-500 {
+  font-weight: 500!important;
+}
+.font-weight-300 {
+  font-weight: 300;
+}
+.font-weight-100 {
+  font-weight: 100;
+}
+.opacity-30 {
+  opacity: 0.3;
+}
+.border-radius-7 {
+  border-radius: 7px;
+}
+.border-50 {
+  border-radius: 50%;
+}
+.dashed-border {
+  border: 10px solid transparent;
+  border-image: url(../icons/border.svg);
+  border-image-repeat: round;
+  border-image-slice: 10%;
+  border-image-width: 20px;
+  border-image-outset: 0px;
+}
+/*-------------------------- General Class Definitions End ----------------*/
+/*-------------------------- Food Categories Page Start -------------------*/
+.discover-food-container {
+  margin-top: 15px;
+  font-family: "Roboto Condensed", sans-serif !important;
+}
+.discover-food-container .title-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.discover-food-container .title-wrapper .title {
+  font-size: 24px;
+}
+.discover-food-container .title-wrapper .fa-ellipsis-h {
+  font-size: 23px;
+  color: #3B5998;
+}
+.discover-food-container .secondary-text {
+  font-weight: 300;
+  font-size: 13px;
+}
+.discover-food-container .secondary-text .icon-edit {
+  margin-left: 15px;
+}
+.food-delivery-options-container {
+  margin-top: 25px;
+}
+.food-delivery-options-container .delivery-row {
+  display: flex;
+  justify-content: space-between;
+}
+.food-delivery-options-container .delivery-row:not(:first-child) {
+  margin-top: 15px;
+}
+.food-delivery-options-container .delivery-row .delivery-option-left {
+  position: relative;
+  padding: 24px 0px 0px 18px;
+  width: 50%;
+  margin-right: 10px;
+  height: 146px;
+  border: 10px solid transparent;
+  border-image: url(../icons/border.svg);
+  border-image-repeat: round;
+  border-image-slice: 10%;
+  border-image-width: 20px;
+  border-image-outset: 0px;
+}
+.food-delivery-options-container .delivery-row .delivery-option-left:hover {
+  cursor: pointer;
+}
+.food-delivery-options-container .delivery-row .delivery-option-left img {
+  height: 43px;
+}
+.food-delivery-options-container .delivery-row .delivery-option-left .delivery-option-light {
+  position: absolute;
+  top: -5px;
+  background-color: #FFB800;
+  padding: 24px 0px 0px 18px;
+  left: 0px;
+  right: -16px;
+  height: 146px;
+  color: white;
+  border-radius: 27.5px;
+  box-shadow: 0 15px 30px #00000020;
+}
+.food-delivery-options-container .delivery-row .delivery-option-left .delivery-option-light img {
+  height: 43px;
+}
+.food-delivery-options-container .delivery-row .delivery-option-right {
+  position: relative;
+  padding: 24px 0px 0px 18px;
+  width: 50%;
+  height: 146px;
+  border: 10px solid transparent;
+  border-image: url(../icons/border.svg);
+  border-image-repeat: round;
+  border-image-slice: 10%;
+  border-image-width: 20px;
+  border-image-outset: 0px;
+}
+.food-delivery-options-container .delivery-row .delivery-option-right:hover {
+  cursor: pointer;
+}
+.food-delivery-options-container .delivery-row .delivery-option-right img {
+  height: 43px;
+}
+.food-delivery-options-container .delivery-row .delivery-option-right .delivery-option-light {
+  position: absolute;
+  top: -5px;
+  background-color: #FFB800;
+  padding: 24px 0px 0px 18px;
+  left: -16px;
+  right: 0px;
+  height: 146px;
+  color: white;
+  border-radius: 27.5px;
+  box-shadow: 0 10px 30px #00000020;
+}
+.food-delivery-options-container .delivery-row .delivery-option-right .delivery-option-light img {
+  height: 43px;
+}
+/*-------------------------- Food Categories Page End ---------------------*/
+/**-------------------------- Owl Carousel Start --------------------------*/
+.owl-lazy img {
+  margin: 0 auto;
+  display: flex;
+}
+/**-------------------------- Owl Carousel End --------------------------*/
+/*# sourceMappingURL=styles.css.map */
