@@ -17,71 +17,87 @@ $(document).ready(function(){
         $(this).find('.delivery-option-light').addClass('hidden');
     });
 
-    if($('#sign-up-carousel').length > 0) {
-        $("#sign-up-carousel").owlCarousel({
-            items: 4,
-            lazyLoad: true,
-            loop: true,
-            margin: 10
-        });
+    var options3 = {
+        autoPlay:true,
+        autoPlayInterval:2000,
+        itemsMobile : [600,3]
+    };
+
+    $('#top-categories-carousel .item').on('mouseover', function(){
+        var hiddenEl = $(this).find('.main-pic.hidden');
+        if(hiddenEl.hasClass('colored')) {
+            hiddenEl.removeClass('hidden');
+            $(this).find('.main-pic.dark').addClass('hidden');
+        }
+    });
+
+    $('#top-categories-carousel .item').on('mouseout', function(){
+        var darkEl = $(this).find('.main-pic.dark');
+        var coloredEl = $(this).find('.main-pic.colored');
+        if(!coloredEl.hasClass('active')) {
+            darkEl.removeClass('hidden');
+            coloredEl.addClass('hidden');
+        }
+    });
+
+    if($("#top-categories-carousel").length > 0) {
+        $("#top-categories-carousel").owlCarousel(options3);
     }
 
-    if($("#podcast-stuff-picks-carousel").length > 0) {
-        $("#podcast-stuff-picks-carousel").owlCarousel({
-            items: 2,
-            lazyLoad: true,
-            loop: true,
-            margin: 10
-        });
-    }
-
-    if($("#top-singer-carousel").length > 0) {
-        $("#top-singer-carousel").owlCarousel({
-            items: 2,
-            lazyLoad: true,
-            loop: true,
-            margin: 10
-        });
-    }
-
-    var owl = $('#favorite-station-carousel.owl-carousel');
-
-    var options = {
+    var options2 = {
         autoPlay:true,
         autoPlayInterval:2000,
         itemsMobile : [600,2]
     };
 
-    $('.options-player').on('click', function(){
-        $('.settings-container').removeClass('hidden');
-        $('.loading-overlay').css('visibility','visible');
+    var options1 = {
+        autoPlay:true,
+        autoPlayInterval:2000,
+        itemsMobile : [600,1]
+    };
+
+    if($("#top-rated-carousel").length > 0) {
+        $("#top-rated-carousel").owlCarousel(options2);
+    }
+
+    if($("#local-favorites-carousel").length > 0) {
+        $("#local-favorites-carousel").owlCarousel(options2);
+    }
+
+    if($("#foodoor-deals-carousel").length > 0) {
+        $("#foodoor-deals-carousel").owlCarousel(options1);
+    }
+
+
+    if($("#best-sellers-carousel").length > 0) {
+        $("#best-sellers-carousel").owlCarousel(options1);
+    }
+
+
+    if($("#buttons-slider").length > 0) {
+        $("#buttons-slider").owlCarousel({
+            autoPlay:true,
+            autoPlayInterval:2000,
+            itemsMobile : [600,4]
+        });
+    }
+
+    $('.bottom-menu a').on('mouseover',function(){
+        var hiddenEl = $(this).find('.menu-pic.hidden');
+        if(hiddenEl.hasClass('colored')) {
+            hiddenEl.removeClass('hidden');
+            $(this).find('.menu-pic.dark').addClass('hidden');
+        }
     });
 
-    if($("#favorite-station-carousel").length > 0) {
-        $("#favorite-station-carousel").owlCarousel(options);
-    }
-
-    if($("#listen-to-what-you-want-carousel").length > 0) {
-        $("#listen-to-what-you-want-carousel").owlCarousel(options);
-    }
-
-    if($("#recent-station-carousel").length > 0) {
-        $("#recent-station-carousel").owlCarousel(options);
-    }
-
-    if($("#featured-podcast-carousel").length > 0) {
-        $("#featured-podcast-carousel").owlCarousel(options);
-    }
-
-    if($("#classical-station-carousel").length > 0) {
-        $("#classical-station-carousel").owlCarousel(options);
-    }
-
-    if($("#fantasy-football-podcast").length > 0) {
-        $("#fantasy-football-podcast").owlCarousel(options);
-    }
-
-    owl.trigger('play.owl.autoplay',[1000]);
+    $('.bottom-menu a').on('mouseout',function(){
+        var darkEl = $(this).find('.menu-pic.dark');
+        var coloredEl = $(this).find('.menu-pic.colored');
+       if(!coloredEl.hasClass('active')) {
+           darkEl.removeClass('hidden');
+           coloredEl.addClass('hidden');
+       }
+    });
 
     $('.password-visibility').on('click', function() {
         var inputelement = $(this).closest('.input-group').find('input');

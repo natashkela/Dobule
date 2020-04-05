@@ -62,6 +62,12 @@ Media Queries
 .purple {
   color: #3B5998;
 }
+.theme-yellow {
+  color: #FFB800;
+}
+.red {
+  color: #D63229;
+}
 /*-------------------------- Color Definitions End---------------------------*/
 /*-------------------------- General Tag Definitions Start ---------------------*/
 * {
@@ -129,6 +135,12 @@ input:focus {
 }
 .content-padding {
   padding: 0 36px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.just-content-padding {
+  padding: 0 36px;
 }
 .hidden {
   display: none!important;
@@ -136,11 +148,6 @@ input:focus {
 .page-content {
   padding-top: 67px;
   padding-bottom: 80px;
-}
-.page-content.content-padding {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
 }
 .bottom-menu {
   position: fixed;
@@ -153,7 +160,7 @@ input:focus {
   width: 100%;
   height: 68px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   border: 10px solid transparent;
   border-image: url(../icons/border.svg);
   border-image-repeat: round;
@@ -161,6 +168,9 @@ input:focus {
   border-image-width: 20px;
   border-image-outset: 0px;
   border-radius: 37px;
+}
+.bottom-menu.border-width-10 {
+  border-image-width: 10px;
 }
 .bottom-menu .menu-btn-container {
   text-align: center;
@@ -234,6 +244,9 @@ input:focus {
 .margin-left-5 {
   margin-left: 5px;
 }
+.font-9 {
+  font-size: 9px;
+}
 .font-11 {
   font-size: 11px;
 }
@@ -277,6 +290,23 @@ input:focus {
   border-image-slice: 10%;
   border-image-width: 20px;
   border-image-outset: 0px;
+}
+.dashed-border.border-width-10 {
+  border-image-width: 10px;
+}
+.border-divider {
+  margin-top: 23px;
+  margin-bottom: 23px;
+  border-bottom: 1px solid #F1F3F8;
+}
+.border-divider:after {
+  content: "";
+  display: block;
+  width: 49px;
+  border: 1px solid #FFB800;
+}
+.border-divider.border-content-padding {
+  margin: 23px 36px;
 }
 /*-------------------------- General Class Definitions End ----------------*/
 /*-------------------------- Food Categories Page Start -------------------*/
@@ -328,6 +358,9 @@ input:focus {
 .food-delivery-options-container .delivery-row .delivery-option-left:hover {
   cursor: pointer;
 }
+.food-delivery-options-container .delivery-row .delivery-option-left.border-width-10 {
+  border-image-width: 10px;
+}
 .food-delivery-options-container .delivery-row .delivery-option-left img {
   height: 43px;
 }
@@ -339,7 +372,7 @@ input:focus {
   left: 0px;
   right: -16px;
   height: 146px;
-  color: white;
+  color: #FFFFFF;
   border-radius: 27.5px;
   box-shadow: 0 15px 30px #00000020;
 }
@@ -361,6 +394,9 @@ input:focus {
 .food-delivery-options-container .delivery-row .delivery-option-right:hover {
   cursor: pointer;
 }
+.food-delivery-options-container .delivery-row .delivery-option-right.border-width-10 {
+  border-image-width: 10px;
+}
 .food-delivery-options-container .delivery-row .delivery-option-right img {
   height: 43px;
 }
@@ -378,6 +414,221 @@ input:focus {
 }
 .food-delivery-options-container .delivery-row .delivery-option-right .delivery-option-light img {
   height: 43px;
+}
+.browse-by-cuisine .title-container .title-text,
+.top-categories .title-container .title-text,
+.top-rated .title-container .title-text,
+.local-favorites .title-container .title-text,
+.foo-door-deals .title-container .title-text,
+.best-sellers .title-container .title-text {
+  flex: 1;
+}
+.browse-by-cuisine .title-container .title-text .title,
+.top-categories .title-container .title-text .title,
+.top-rated .title-container .title-text .title,
+.local-favorites .title-container .title-text .title,
+.foo-door-deals .title-container .title-text .title,
+.best-sellers .title-container .title-text .title {
+  margin-left: 5px;
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-weight: 400;
+  font-size: 20px;
+  font-stretch: condensed;
+  line-height: 1.2;
+  color: #000000;
+}
+.browse-by-cuisine .title-container .title-text img,
+.top-categories .title-container .title-text img,
+.top-rated .title-container .title-text img,
+.local-favorites .title-container .title-text img,
+.foo-door-deals .title-container .title-text img,
+.best-sellers .title-container .title-text img {
+  width: 20px;
+  height: 20px;
+  margin-top: -5px;
+}
+.show-all {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-size: 12px;
+  font-weight: 300;
+  font-stretch: condensed;
+  line-height: 1.17;
+  letter-spacing: -0.12px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.show-all a {
+  color: #4d4d4d;
+}
+.show-all.Roboto {
+  font-family: 'Roboto', sans-serif !important;
+}
+.category-listing {
+  margin-top: 10px;
+}
+.category-listing .category-item {
+  padding: 12px 0px;
+  border-bottom: 1px solid #f1f3f8;
+}
+.category-listing .category-item .text {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: -0.14px;
+  font-weight: 300;
+}
+.category-listing .category-item .icon {
+  margin-top: -8px;
+}
+.category-listing .category-item:last-child {
+  border-bottom: 0;
+}
+.category-listing .category-item:hover {
+  cursor: pointer;
+}
+.category-listing.last-child-visible .category-item:last-child {
+  border-bottom: 1px solid #f1f3f8;
+}
+.category-listing a .category-item {
+  border-bottom: 1px solid #f1f3f8 !important;
+}
+.slider-settings.owl-theme .owl-controls {
+  margin-top: 20px;
+}
+.slider-settings.owl-theme .owl-controls .owl-page span {
+  width: 8px;
+  height: 8px;
+}
+.slider-settings .item {
+  margin-right: 10px;
+}
+.slider-settings .item .pic-item {
+  position: relative;
+}
+.slider-settings img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.slider-settings .item-text {
+  margin-top: 5px;
+}
+.slider-settings .item-text .main-title {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+.slider-settings .item-text .secondary-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 11px;
+  color: #000000;
+  font-weight: 300;
+}
+.slider-settings .owl-controls {
+  display: none!important;
+}
+#top-categories-carousel {
+  padding-top: 18px;
+}
+#top-categories-carousel .item {
+  margin-right: 10px;
+}
+#top-categories-carousel .item .pic-item {
+  height: 88px;
+  width: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#top-categories-carousel .item .label {
+  margin-top: 10px;
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-size: 16px;
+  font-weight: 400;
+}
+#top-categories-carousel .item .sub-text {
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 300;
+  font-size: 11px;
+}
+#top-categories-carousel .item img {
+  height: 43px;
+}
+#buttons-slider {
+  margin-top: 20px;
+}
+#buttons-slider .owl-item {
+  width: auto!important;
+}
+#buttons-slider .button-item {
+  position: relative;
+}
+#buttons-slider .button-item button {
+  font-weight: 300;
+  background-color: white;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  padding: 4px 10px;
+  font-family: "Roboto Condensed", sans-serif !important;
+  border: 1px solid #000000;
+  font-size: 10px;
+}
+#buttons-slider .button-item button.active,
+#buttons-slider .button-item button:hover {
+  background-color: #FFB800;
+  font-weight: 400;
+  border: 1px solid #FFB800;
+}
+#buttons-slider .button-item button .fa-star {
+  margin-left: 5px;
+  margin-top: -2px;
+  font-size: 7px;
+}
+#top-rated-carousel,
+#local-favorites-carousel {
+  margin-top: 20px;
+  padding-left: 36px;
+}
+#top-rated-carousel img,
+#local-favorites-carousel img {
+  width: 125px;
+}
+#top-rated-carousel .owl-item,
+#local-favorites-carousel .owl-item {
+  width: 150px!important;
+}
+#foodoor-deals-carousel,
+#best-sellers-carousel {
+  margin-top: 20px;
+  padding-left: 36px;
+}
+#foodoor-deals-carousel img,
+#best-sellers-carousel img {
+  width: 260px;
+}
+#foodoor-deals-carousel .owl-item,
+#best-sellers-carousel .owl-item {
+  width: 285px!important;
+}
+#foodoor-deals-carousel .item-text,
+#best-sellers-carousel .item-text {
+  padding-right: 17px;
+}
+.owl-lazy img {
+  margin: 0 auto;
+  display: flex;
 }
 /*-------------------------- Food Categories Page End ---------------------*/
 /**-------------------------- Owl Carousel Start --------------------------*/
