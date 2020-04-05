@@ -182,31 +182,6 @@ input:focus{
   display: flex;
   align-items: center;
 }
-.line-height-1{line-height:1;}
-.line-height-20{line-height:20px;}
-.padding-0{padding:0!important;}
-.margin-top-10{margin-top:10px;}
-.margin-top-15{margin-top:15px;}
-.margin-top-30{margin-top:30px;}
-.margin-top-35{margin-top:35px;}
-.margin-top-40{margin-top:40px;}
-.margin-top-60{margin-top:60px;}
-.margin-bottom-10{margin-bottom:10px;}
-.margin-bottom-30{margin-bottom:30px;}
-.margin-left-5{margin-left:5px;}
-.font-9{font-size:9px;}
-.font-11{font-size:11px;}
-.font-12{font-size:12px;}
-.font-14{font-size:14px;}
-.font-15{font-size:15px;}
-.font-16{font-size:16px;}
-.font-20{font-size:20px;}
-.font-weight-500{font-weight:500!important;}
-.font-weight-300{font-weight:300;}
-.font-weight-100{font-weight:100;}
-.opacity-30{opacity:0.3;}
-.border-radius-7{border-radius:7px;}
-.border-50{border-radius:50%;}
 .dashed-border{
   border: 10px solid transparent;
   border-image: url(../icons/border.svg);
@@ -230,6 +205,35 @@ input:focus{
   }
   &.border-content-padding{
     margin:23px 36px;
+  }
+}
+.rating {
+  float: left;
+  font-size: 10px;
+  .fas.fa-star {
+    color: #8E8E93;
+    font-weight:300;
+    &.active {
+      color: @theme_yellow;
+      font-weight:600;
+    }
+  }
+}
+.center-all-way{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.read-review{
+  text-decoration:underline;
+  font-size:11px;
+  .Roboto;
+  font-weight:300;
+  .fa-angle-double-right{
+    font-size:8px;
+  }
+  &.up{
+    margin-top:-3px;
   }
 }
 /*-------------------------- General Class Definitions End ----------------*/
@@ -331,7 +335,8 @@ input:focus{
 .local-favorites,
 .foo-door-deals,
 .best-sellers,
-.fast-foods{
+.fast-foods,
+.restaurant-info{
   .title-container{
     .title-text{
       flex:1;
@@ -569,9 +574,90 @@ input:focus{
 .gm-bundled-control.gm-bundled-control-on-bottom{display:none;}
 /*-------------------------- View On Map Page End -------------------------*/
 
+/*-------------------------- Single Page Restaurant Start -----------------*/
+.facts-listing{
+  margin-top:15px;
+  .fact-item{
+    &:not(:first-child){
+      margin-left:15px;
+    }
+    .main-text{
+      .RobotoCondensed;
+      .font-11;
+      .font-weight-300;
+      color:@black;
+    }
+  }
+}
+
+.menu-listing-container{
+  .menu-item{
+    margin-top:20px;
+    .dashed-border;
+    padding: 15px 20px;
+    .title{
+      .RobotoCondensed;
+      font-weight:400;
+      font-size:14px;
+    }
+    .description{
+      .intro-text;
+      .font-11;
+    }
+    .more{
+      margin-top:15px;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      .description{
+        margin-top:0px;
+      }
+      .image{
+        margin-left:30px;
+        img{
+          height:80px;
+          width:80px;
+        }
+      }
+    }
+  }
+}
+/*-------------------------- Single Page Restaurant End -------------------*/
+
 /**-------------------------- Owl Carousel Start --------------------------*/
 .owl-lazy img{
   margin:0 auto;
   display:flex;
 }
 /**-------------------------- Owl Carousel End --------------------------*/
+
+/**-------------------------- Reusable Classes Start ---------------------*/
+.line-height-1{line-height:1;}
+.line-height-20{line-height:20px;}
+.padding-0{padding:0!important;}
+.margin-top-5{margin-top:5px!important}
+.margin-top-10{margin-top:10px;}
+.margin-top-15{margin-top:15px;}
+.margin-top-30{margin-top:30px;}
+.margin-top-35{margin-top:35px;}
+.margin-top-40{margin-top:40px;}
+.margin-top-60{margin-top:60px;}
+.margin-bottom-10{margin-bottom:10px;}
+.margin-bottom-30{margin-bottom:30px;}
+.margin-left-5{margin-left:5px;}
+.margin-left-10{margin-left:10px;}
+.margin-left-20{margin-left:20px;}
+.font-9{font-size:9px;}
+.font-11{font-size:11px;}
+.font-12{font-size:12px;}
+.font-14{font-size:14px;}
+.font-15{font-size:15px;}
+.font-16{font-size:16px;}
+.font-20{font-size:20px;}
+.font-weight-500{font-weight:500!important;}
+.font-weight-300{font-weight:300;}
+.font-weight-100{font-weight:100;}
+.opacity-30{opacity:0.3;}
+.border-radius-7{border-radius:7px;}
+.border-50{border-radius:50%;}
+/**-------------------------- Reusable Classes End ---------------------*/
