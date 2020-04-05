@@ -420,7 +420,8 @@ input:focus {
 .top-rated .title-container .title-text,
 .local-favorites .title-container .title-text,
 .foo-door-deals .title-container .title-text,
-.best-sellers .title-container .title-text {
+.best-sellers .title-container .title-text,
+.fast-foods .title-container .title-text {
   flex: 1;
 }
 .browse-by-cuisine .title-container .title-text .title,
@@ -428,7 +429,8 @@ input:focus {
 .top-rated .title-container .title-text .title,
 .local-favorites .title-container .title-text .title,
 .foo-door-deals .title-container .title-text .title,
-.best-sellers .title-container .title-text .title {
+.best-sellers .title-container .title-text .title,
+.fast-foods .title-container .title-text .title {
   margin-left: 5px;
   font-family: "Roboto Condensed", sans-serif !important;
   font-weight: 400;
@@ -442,10 +444,31 @@ input:focus {
 .top-rated .title-container .title-text img,
 .local-favorites .title-container .title-text img,
 .foo-door-deals .title-container .title-text img,
-.best-sellers .title-container .title-text img {
+.best-sellers .title-container .title-text img,
+.fast-foods .title-container .title-text img {
   width: 20px;
   height: 20px;
   margin-top: -5px;
+}
+.intro-text {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1.14;
+  color: #000000;
+  opacity: 0.6;
+  margin-top: 17px;
+}
+.intro-text.margin-bottom {
+  margin-bottom: 17px;
+}
+.fast-foods .item {
+  padding-bottom: 10px;
+}
+.fast-foods .item:not(:first-child) {
+  margin-top: 15px;
+}
+.fast-foods .item:not(:last-child) {
+  border-bottom: 0.5px solid #d8d8d8;
 }
 .show-all {
   font-family: "Roboto Condensed", sans-serif !important;

@@ -28,6 +28,7 @@ Media Queries
 @white: #FFFFFF;
 @light-gray-1: #88888C;
 @light-gray-2: rgba(85,85,85,0.03);
+@light-gray-3: #d8d8d8;
 @purple: #3B5998;
 @theme_yellow: #FFB800;
 @red: #D63229;
@@ -329,7 +330,8 @@ input:focus{
 .top-rated,
 .local-favorites,
 .foo-door-deals,
-.best-sellers{
+.best-sellers,
+.fast-foods{
   .title-container{
     .title-text{
       flex:1;
@@ -347,6 +349,28 @@ input:focus{
         height: 20px;
         margin-top: -5px;
       }
+    }
+  }
+}
+.intro-text{
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1.14;
+  color:@black;
+  opacity:0.6;
+  margin-top:17px;
+  &.margin-bottom{
+    margin-bottom:17px;
+  }
+}
+.fast-foods{
+  .item{
+    padding-bottom: 10px;
+    &:not(:first-child){
+      margin-top:15px;
+    }
+    &:not(:last-child){
+      border-bottom: 0.5px solid @light-gray-3;
     }
   }
 }
