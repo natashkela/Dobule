@@ -6,8 +6,95 @@ document.onreadystatechange = function () {
         $('.main-content').removeClass('hidden');
     }
 };
+var map;
+var requestedMarker;
+var markers = [];
+function hideMarkers() {
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(null); //Remove the marker from the map
+    }
+}
+function makeMarker( position, icon, title, listener=false) {
+    var marker = new google.maps.Marker({
+        position: position,
+        map: map,
+        icon: icon,
+        title: title,
+        animation: google.maps.Animation.DROP,
+    });
+    markers.push(marker);
+    var addListenerToMarker = function(myMarker){
+        marker.addListener('click', function() {
+            //What happens on marker click
+        });
+    }
+    if(listener){
+        // add a closure for listener manage
+        addListenerToMarker(marker);
+
+    }
+    map.setCenter(position);
+    map.setZoom(15);
+    requestedMarker = marker;
+}
+var markerList = [
+    {lat: 42.367785,lng: -71.056631},
+    {lat: 42.366743,lng: -71.056713},
+    {lat: 42.367235, lng: -71.052861},
+    {lat: 42.364444,lng: -71.053076},
+    {lat: 42.366854, lng: -71.052303},
+    {lat: 42.364183, lng:-71.057517},
+    {lat: 42.362816, lng:-71.053816}
+];
+var homeMarker = {lat:42.367741, lng: -71.054977};
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        mapTypeControl: false,
+        center: {lat:42.367741, lng: -71.054977},
+        zoom: 15,
+        fullscreenControl: false,
+    });
+    $(window).on('resize', function(){
+        google.maps.event.trigger(map, 'resize');
+    })
+}
 $(document).ready(function(){
     'use strict';
+    if($('#map').length>0){
+        var mapPin = new google.maps.MarkerImage(
+            // URL
+            './icons/map_pin.svg',
+            // (width,height)
+            new google.maps.Size( 40, 40 ),
+            // The origin point (x,y)
+            new google.maps.Point( 0, 0 ),
+            // The anchor point (x,y)
+            new google.maps.Point( 0, 6 ),
+            //Scaled Size
+            new google.maps.Size(40, 40)
+        );
+        var housePin = new google.maps.MarkerImage(
+            // URL
+            './icons/map_pin_home.svg',
+            // (width,height)
+            new google.maps.Size( 60, 60 ),
+            // The origin point (x,y)
+            new google.maps.Point( 0, 0 ),
+            // The anchor point (x,y)
+            new google.maps.Point( 0, 6 ),
+            //Scaled Size
+            new google.maps.Size(60, 60)
+        );
+    }
+
+    if($('.view-on-map').length > 0){
+        setTimeout(function(){
+            for(var i=0;i<markerList.length;i++){
+                makeMarker(markerList[i],mapPin, 'Map Pin', true);
+            }
+            makeMarker(homeMarker, housePin, 'House Pin', true);
+        }, 1000);
+    }
 
     $('.delivery-option-left, .delivery-option-right').on('mouseover', function(){
         $(this).find('.delivery-option-light').removeClass('hidden');
@@ -68,11 +155,9 @@ $(document).ready(function(){
         $("#foodoor-deals-carousel").owlCarousel(options1);
     }
 
-
     if($("#best-sellers-carousel").length > 0) {
         $("#best-sellers-carousel").owlCarousel(options1);
     }
-
 
     if($("#buttons-slider").length > 0) {
         $("#buttons-slider").owlCarousel({
@@ -108,7 +193,6 @@ $(document).ready(function(){
         }
     });
 
-
     $('.fas.fa-star').on('mouseover', function(){
         var index = $(this).index();
         $(this).parent().find('.fas.fa-star').removeClass('active');
@@ -142,48 +226,8 @@ $(document).ready(function(){
         }
     });
 
-    $('.tab-pills .title-text').on('click', function(){
-        $('.tab-pills .title-text').removeClass('active');
-        $(this).addClass('active');
-        var activeClass = $(this).data('active-class');
-        $('.tab-pill-container').addClass('hidden');
-        $('.'+activeClass).removeClass('hidden').addClass('active');
-    });
-
-    $('.options').on('click', function(){
-        $( '.options-container').fadeIn( "slow", function() {
-            $('body').addClass('modal-open');
-        });
-    });
-
-    $('.help-feedback').on('click', function(){
-        $( '.options-container-1').fadeIn( "slow", function() {
-            $('body').addClass('modal-open');
-        });
-    });
-
     $('.cancel-option').on('click', function(){
         checkModalOpen();
-    });
-
-    $('.add-country-btn').on('click', function(){
-        $('.settings-start').addClass('hidden');
-        $('.add-country-start').removeClass('hidden');
-        $('.settings-add-country-start').addClass('hidden');
-        $('.settings-add-country').removeClass('hidden');
-        $('.settings-start-container').addClass('hidden');
-        $('.settings-add-country-choices').removeClass('hidden');
-        $('.settings-back-btn').removeClass('visibility-hidden');
-    });
-
-    $('.icon-heart').on('click',function () {
-        $(this).addClass('hidden');
-        $(this).parent().find('.icon-heart-filled').removeClass('hidden');
-    });
-
-    $('.icon-heart-filled').on('click',function () {
-        $(this).addClass('hidden');
-        $(this).parent().find('.icon-heart').removeClass('hidden');
     });
 
     function checkModalOpen(){

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="28px" viewBox="0 0 20 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>pins</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="12.120643%" x2="50%" y2="83.4585337%" id="linearGradient-1">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-46.2%" y="-35.3%" width="192.3%" height="170.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Food-Discover-(categories-with-listing)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="View-on-the-Map" transform="translate(-212.000000, -440.000000)">
+            <g id="Map" transform="translate(37.000000, 264.000000)">
+                <g id="Customer's-home" transform="translate(30.000000, 33.000000)">
+                    <g id="Pins" transform="translate(86.000000, 47.000000)">
+                        <g id="pins" transform="translate(59.000000, 96.000000)">
+                            <g id="Misc/Elements/Map-Pin">
+                                <g id="Group">
+                                    <path d="M16.7164756,10.2323944 C17.6523839,8.44719225 16.1954268,7 13.4622709,7 C10.7291151,7 7.75475099,8.44719225 6.81884277,10.2323944 C5.88293455,12.0175965 7.33989163,13.4647887 10.0730475,13.4647887 C12.8062033,13.4647887 15.7805674,12.0175965 16.7164756,10.2323944 Z M10.622916,13.4647887 L5.09973699,24 L4,24 L9.52317898,13.4647887 L10.622916,13.4647887 Z" id="Oval-4" fill="url(#linearGradient-1)" filter="url(#filter-2)"></path>
+                                    <ellipse id="Oval-3" fill="#000000" cx="4.5" cy="23.5" rx="1.5" ry="1"></ellipse>
+                                    <rect id="Rectangle-1" fill="#AAACAF" x="4" y="8" width="1" height="15"></rect>
+                                    <circle id="Oval-1" fill="#FE3824" cx="4.5" cy="4.5" r="4.5"></circle>
+                                    <circle id="Oval-2" fill="#FFFFFF" cx="4" cy="3" r="1"></circle>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
