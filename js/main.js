@@ -226,6 +226,39 @@ $(document).ready(function(){
         }
     });
 
+    $('.price-counter .minus').on('click', function(){
+        var itemPrice = $(this).closest('.price-counter').find('.value');
+        var itemQuantity = $(this).closest('.price-counter').find('.quantity');
+        var qty = itemQuantity.text();
+        var price = $(this).closest('.price-counter').find('.value').data('price');
+        if(qty > 0){
+            itemQuantity.text(parseInt(qty)-1);
+        }
+        else{
+            itemQuantity.text(0);
+        }
+        itemPrice.text(countPriceForItem(itemQuantity.text(), price));
+
+    });
+
+    $('.price-counter .plus').on('click', function(){
+        var itemPrice = $(this).closest('.price-counter').find('.value');
+        var itemQuantity = $(this).closest('.price-counter').find('.quantity');
+        var qty = itemQuantity.text();
+        var price = $(this).closest('.price-counter').find('.value').data('price');
+        if(qty < 100){
+            itemQuantity.text(parseInt(qty)+1);
+        }
+        else{
+            itemQuantity.text(0);
+        }
+        itemPrice.text(countPriceForItem(itemQuantity.text(), price));
+    });
+
+    function countPriceForItem(quantity, itemPrice){
+        return (quantity*itemPrice).toFixed(2);
+    }
+
     $('.cancel-option').on('click', function(){
         checkModalOpen();
     });

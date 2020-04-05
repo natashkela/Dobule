@@ -32,6 +32,7 @@ Media Queries
 @purple: #3B5998;
 @theme_yellow: #FFB800;
 @red: #D63229;
+@red_2: #C8171D;
 .light-gray-1{
   color:@light-gray-1;
 }
@@ -218,6 +219,9 @@ input:focus{
       font-weight:600;
     }
   }
+  &.min-width{
+    min-width: 67px;
+  }
 }
 .center-all-way{
   display: flex;
@@ -234,6 +238,35 @@ input:focus{
   }
   &.up{
     margin-top:-3px;
+  }
+}
+.primary-button{
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @theme_yellow;
+  border-radius: 30px;
+  position: relative;
+  .text{
+    .Roboto;
+    font-size:15px;
+    font-weight:300;
+    .bolder-txt{
+      font-weight:400;
+    }
+  }
+  .icon{
+    position: absolute;
+    right: 0;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 0.2px solid @theme_yellow;
+    border-radius: 30px;
   }
 }
 /*-------------------------- General Class Definitions End ----------------*/
@@ -589,12 +622,11 @@ input:focus{
     }
   }
 }
-
 .menu-listing-container{
   .menu-item{
     margin-top:20px;
     .dashed-border;
-    padding: 15px 20px;
+    padding: 5px 10px;
     .title{
       .RobotoCondensed;
       font-weight:400;
@@ -613,6 +645,8 @@ input:focus{
         margin-top:0px;
       }
       .image{
+        display:flex;
+        align-items:center;
         margin-left:30px;
         img{
           height:80px;
@@ -644,12 +678,65 @@ input:focus{
         margin-left:20px;
       }
       .image{
+        display:flex;
+        align-items:center;
         img {
-          width: 66px;
-          height: 62px;
+          max-width: 62px;
+          max-height: 66px;
         }
       }
     }
+  }
+}
+.single-product{
+  height:206px;
+  width:219px;
+}
+.product-description{
+  .dashed-border;
+  padding: 5px 10px;
+  &:first-child{
+    margin-top:50px;
+  }
+  &.margin-18{
+    margin-top:18px;
+  }
+  .title{
+    .RobotoCondensed;
+    font-weight:400;
+    font-size:25px;
+  }
+  .description{
+    .Roboto;
+    text-align:center;
+    font-size:13px;
+    font-weight:300;
+  }
+}
+.price-counter{
+  margin-top:18px;
+  padding:0 20px;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  .price{
+    color:@red_2;
+    .RobotoCondensed;
+    font-size:25px;
+    font-weight:900;
+  }
+  .counter{
+    .minus,
+    .plus{
+      padding:0px 5px;
+      cursor:pointer;
+    }
+    .quantity{
+      padding: 0px 5px;
+    }
+    .RobotoCondensed;
+    font-size:16px;
+    font-weight:400;
   }
 }
 /*-------------------------- Single Page Restaurant End -------------------*/
@@ -665,9 +752,11 @@ input:focus{
 .line-height-1{line-height:1;}
 .line-height-20{line-height:20px;}
 .padding-0{padding:0!important;}
+.padding-left-20{padding-left:20px!important;}
 .margin-top-5{margin-top:5px!important}
 .margin-top-10{margin-top:10px;}
 .margin-top-15{margin-top:15px;}
+.margin-top-20{margin-top:20px;}
 .margin-top-25{margin-top:25px;}
 .margin-top-30{margin-top:30px;}
 .margin-top-35{margin-top:35px;}
@@ -682,6 +771,7 @@ input:focus{
 .font-10{font-size:10px;}
 .font-11{font-size:11px;}
 .font-12{font-size:12px;}
+.font-13{font-size:13px;}
 .font-14{font-size:14px;}
 .font-15{font-size:15px;}
 .font-16{font-size:16px;}

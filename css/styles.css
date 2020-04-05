@@ -245,6 +245,9 @@ input:focus {
   color: #FFB800;
   font-weight: 600;
 }
+.rating.min-width {
+  min-width: 67px;
+}
 .center-all-way {
   display: flex;
   justify-content: center;
@@ -261,6 +264,35 @@ input:focus {
 }
 .read-review.up {
   margin-top: -3px;
+}
+.primary-button {
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFB800;
+  border-radius: 30px;
+  position: relative;
+}
+.primary-button .text {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 15px;
+  font-weight: 300;
+}
+.primary-button .text .bolder-txt {
+  font-weight: 400;
+}
+.primary-button .icon {
+  position: absolute;
+  right: 0;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 0.2px solid #FFB800;
+  border-radius: 30px;
 }
 /*-------------------------- General Class Definitions End ----------------*/
 /*-------------------------- Food Categories Page Start -------------------*/
@@ -645,7 +677,7 @@ input:focus {
   border-image-slice: 13%;
   border-image-width: 20px;
   border-image-outset: 0px;
-  padding: 15px 20px;
+  padding: 5px 10px;
 }
 .menu-listing-container .menu-item.border-width-10 {
   border-image-width: 10px;
@@ -677,6 +709,8 @@ input:focus {
   margin-top: 0px;
 }
 .menu-listing-container .menu-item .more .image {
+  display: flex;
+  align-items: center;
   margin-left: 30px;
 }
 .menu-listing-container .menu-item .more .image img {
@@ -707,9 +741,72 @@ input:focus {
   width: 100%;
   margin-left: 20px;
 }
+.menu-listing-container .menu-item.row-view .image {
+  display: flex;
+  align-items: center;
+}
 .menu-listing-container .menu-item.row-view .image img {
-  width: 66px;
-  height: 62px;
+  max-width: 62px;
+  max-height: 66px;
+}
+.single-product {
+  height: 206px;
+  width: 219px;
+}
+.product-description {
+  border: 10px solid transparent;
+  border-image: url(../icons/border.svg);
+  border-image-repeat: repeat;
+  border-image-slice: 13%;
+  border-image-width: 20px;
+  border-image-outset: 0px;
+  padding: 5px 10px;
+}
+.product-description.border-width-10 {
+  border-image-width: 10px;
+}
+.product-description:first-child {
+  margin-top: 50px;
+}
+.product-description.margin-18 {
+  margin-top: 18px;
+}
+.product-description .title {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-weight: 400;
+  font-size: 25px;
+}
+.product-description .description {
+  font-family: 'Roboto', sans-serif !important;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 300;
+}
+.price-counter {
+  margin-top: 18px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price-counter .price {
+  color: #C8171D;
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-size: 25px;
+  font-weight: 900;
+}
+.price-counter .counter {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-size: 16px;
+  font-weight: 400;
+}
+.price-counter .counter .minus,
+.price-counter .counter .plus {
+  padding: 0px 5px;
+  cursor: pointer;
+}
+.price-counter .counter .quantity {
+  padding: 0px 5px;
 }
 /*-------------------------- Single Page Restaurant End -------------------*/
 /**-------------------------- Owl Carousel Start --------------------------*/
@@ -728,6 +825,9 @@ input:focus {
 .padding-0 {
   padding: 0!important;
 }
+.padding-left-20 {
+  padding-left: 20px!important;
+}
 .margin-top-5 {
   margin-top: 5px !important;
 }
@@ -736,6 +836,9 @@ input:focus {
 }
 .margin-top-15 {
   margin-top: 15px;
+}
+.margin-top-20 {
+  margin-top: 20px;
 }
 .margin-top-25 {
   margin-top: 25px;
@@ -778,6 +881,9 @@ input:focus {
 }
 .font-12 {
   font-size: 12px;
+}
+.font-13 {
+  font-size: 13px;
 }
 .font-14 {
   font-size: 14px;
