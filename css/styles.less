@@ -11,7 +11,7 @@ Media Queries
 /*-------------------------- Font Imports  Start -------------------------------*/
 //@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Display:100,400&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,900&display=swap');
 /*-------------------------- Font Imports  End -------------------------------*/
 
 /*-------------------------- Font Class Definitions Start -----------------------*/
@@ -185,8 +185,8 @@ input:focus{
 .dashed-border{
   border: 10px solid transparent;
   border-image: url(../icons/border.svg);
-  border-image-repeat: round;
-  border-image-slice:10%;
+  border-image-repeat: repeat;
+  border-image-slice:13%;
   border-image-width:20px;
   border-image-outset: 0px;
   &.border-width-10{
@@ -620,6 +620,36 @@ input:focus{
         }
       }
     }
+    &.row-view{
+      display:flex;
+      .rating{
+        margin-top:-3px;
+        .fa-star{
+          font-size:7px;
+        }
+      }
+      .title{
+        font-size:13px;
+      }
+      .description{
+        .font-12;
+      }
+      .price{
+        font-weight:900;
+        .RobotoCondensed;
+        font-size:13px;
+      }
+      .info-container{
+        width:100%;
+        margin-left:20px;
+      }
+      .image{
+        img {
+          width: 66px;
+          height: 62px;
+        }
+      }
+    }
   }
 }
 /*-------------------------- Single Page Restaurant End -------------------*/
@@ -638,6 +668,7 @@ input:focus{
 .margin-top-5{margin-top:5px!important}
 .margin-top-10{margin-top:10px;}
 .margin-top-15{margin-top:15px;}
+.margin-top-25{margin-top:25px;}
 .margin-top-30{margin-top:30px;}
 .margin-top-35{margin-top:35px;}
 .margin-top-40{margin-top:40px;}
@@ -648,6 +679,7 @@ input:focus{
 .margin-left-10{margin-left:10px;}
 .margin-left-20{margin-left:20px;}
 .font-9{font-size:9px;}
+.font-10{font-size:10px;}
 .font-11{font-size:11px;}
 .font-12{font-size:12px;}
 .font-14{font-size:14px;}

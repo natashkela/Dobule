@@ -222,7 +222,7 @@ $(document).ready(function(){
             }
         }
         else{
-            $('.fas.fa-star').removeClass('active');
+            $(this).find('.fas.fa-star').removeClass('active');
         }
     });
 
