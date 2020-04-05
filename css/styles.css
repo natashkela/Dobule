@@ -219,6 +219,17 @@ input:focus {
 .dashed-border.border-width-10 {
   border-image-width: 10px;
 }
+.dashed-border-white {
+  border: 5px solid transparent;
+  border-image: url(../icons/border_white.svg);
+  border-image-repeat: repeat;
+  border-image-slice: 15%;
+  border-image-width: 8px;
+  border-image-outset: 0px;
+}
+.dashed-border-white.border-width-10 {
+  border-image-width: 10px;
+}
 .border-divider {
   margin-top: 23px;
   margin-bottom: 23px;
@@ -293,6 +304,121 @@ input:focus {
   background: white;
   border: 0.2px solid #FFB800;
   border-radius: 30px;
+}
+.main-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #FFB800;
+  right: 0;
+  bottom: 0;
+}
+.main-menu .close-icon {
+  float: right;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding-right: 35px;
+  padding-top: 20px;
+}
+.main-menu .main-menu-container {
+  padding-left: 35px;
+}
+.main-menu .main-menu-container .pic img {
+  border: 5px solid transparent;
+  border-image: url(../icons/border_white.svg);
+  border-image-repeat: repeat;
+  border-image-slice: 15%;
+  border-image-width: 8px;
+  border-image-outset: 0px;
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+}
+.main-menu .main-menu-container .pic img.border-width-10 {
+  border-image-width: 10px;
+}
+.main-menu .main-menu-container .menu-with-pic {
+  margin-top: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+.main-menu .main-menu-container .info-menu-container {
+  width: 100%;
+}
+.main-menu .main-menu-container .info-menu-container .info-container {
+  font-family: "Roboto Condensed", sans-serif !important;
+  color: #FFFFFF;
+}
+.main-menu .main-menu-container .info-menu-container .info-container .welcome-txt {
+  font-weight: 300;
+  font-size: 12px;
+}
+.main-menu .main-menu-container .info-menu-container .info-container .name {
+  font-size: 17px;
+  font-weight: 400;
+  text-shadow: 0 3px 6px #00000012;
+}
+.main-menu .main-menu-container .info-menu-container .info-container .dark-txt {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 300;
+}
+.main-menu .main-menu-container .menu-items-container {
+  margin-top: 60px;
+}
+.main-menu .main-menu-container .menu-items-container .menu-item {
+  padding: 10px 0px;
+}
+.main-menu .main-menu-container .menu-items-container .menu-item:not(:first-child) {
+  margin-top: 10px;
+}
+.main-menu .main-menu-container .menu-items-container .menu-item .name {
+  margin-left: 13px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Roboto Condensed", sans-serif !important;
+}
+.main-menu .main-menu-container .menu-items-container .menu-item .dark-icon {
+  display: none;
+}
+.main-menu .main-menu-container .menu-items-container .menu-item:hover {
+  margin-left: 10px;
+}
+.main-menu .main-menu-container .menu-items-container .menu-item:hover .dark-icon {
+  display: inline;
+}
+.main-menu .main-menu-container .menu-items-container .menu-item:hover .white-icon {
+  display: none;
+}
+.main-menu .main-menu-container .menu-items-container .menu-item:hover .name {
+  color: #000000;
+}
+.main-menu .logout {
+  padding-left: 35px;
+}
+.main-menu .logout .name {
+  margin-left: 13px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Roboto Condensed", sans-serif !important;
+}
+.main-menu .logout .dark-icon {
+  display: none;
+}
+.main-menu .logout:hover {
+  margin-left: 10px;
+}
+.main-menu .logout:hover .dark-icon {
+  display: inline;
+}
+.main-menu .logout:hover .white-icon {
+  display: none;
+}
+.main-menu .logout:hover .name {
+  color: #000000;
 }
 /*-------------------------- General Class Definitions End ----------------*/
 /*-------------------------- Food Categories Page Start -------------------*/

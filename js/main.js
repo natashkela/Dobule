@@ -255,6 +255,11 @@ $(document).ready(function(){
         itemPrice.text(countPriceForItem(itemQuantity.text(), price));
     });
 
+    $('.menu-icon').add('.main-menu .close-icon').on('click', function(){
+       $('.page-content').toggleClass('hidden');
+       $('.main-menu').toggleClass('hidden');
+    });
+
     function countPriceForItem(quantity, itemPrice){
         return (quantity*itemPrice).toFixed(2);
     }
@@ -273,32 +278,6 @@ $(document).ready(function(){
             });
         }
     }
-
-    $('.menu-open').on('click',function(){
-        var main_menu = $('.main-menu');
-        main_menu.toggleClass('hidden-soft');
-        $(this).toggleClass('closed');
-        if($(this).hasClass('closed')) {
-            main_menu.css('display','block').animate({
-                width: "toggle"
-            }, 300);
-        }
-        else {
-            main_menu.css('display','block').hide().animate({
-                width: "toggle"
-            }, 300);
-        }
-        $('.loading-overlay').css('visibility','visible');
-    });
-
-    $('.menu-close').on('click', function(){
-        var main_menu = $('.main-menu');
-        main_menu.hide().css('display','block').animate({
-            width: "toggle"
-        }, 300);
-        $('.menu-open').addClass('closed');
-        $('.loading-overlay').css('visibility','hidden');
-    });
 
 
 });

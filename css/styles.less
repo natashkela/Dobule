@@ -194,6 +194,17 @@ input:focus{
     border-image-width:10px;
   }
 }
+.dashed-border-white{
+  border: 5px solid transparent;
+  border-image: url(../icons/border_white.svg);
+  border-image-repeat: repeat;
+  border-image-slice: 15%;
+  border-image-width: 8px;
+  border-image-outset: 0px;
+  &.border-width-10{
+    border-image-width:10px;
+  }
+}
 .border-divider{
   margin-top:23px;
   margin-bottom:23px;
@@ -267,6 +278,115 @@ input:focus{
     background: white;
     border: 0.2px solid @theme_yellow;
     border-radius: 30px;
+  }
+}
+.main-menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #FFB800;
+  right: 0;
+  bottom: 0;
+  .close-icon{
+    float:right;
+    font-size:16px;
+    color: @white;
+    padding-right: 35px;
+    padding-top: 20px;
+  }
+  .main-menu-container{
+    padding-left: 35px;
+    .pic{
+      img{
+        .dashed-border-white;
+        height: 52px;
+        width: 52px;
+        border-radius: 50%;
+      }
+    }
+    .menu-with-pic{
+      margin-top: 13px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .info-menu-container{
+      width:100%;
+      .info-container{
+        .RobotoCondensed;
+        color:@white;
+        .welcome-txt{
+          font-weight:300;
+          font-size:12px;
+        }
+        .name{
+          font-size:17px;
+          font-weight:400;
+          text-shadow:0 3px 6px #00000012;
+        }
+        .dark-txt{
+          color:@black;
+          font-size:12px;
+          font-weight:300;
+        }
+      }
+    }
+    .menu-items-container{
+      margin-top:60px;
+      .menu-item{
+        &:not(:first-child){
+          margin-top:10px;
+        }
+        padding:10px 0px;
+        .name{
+          margin-left: 13px;
+          color: @white;
+          font-size: 16px;
+          font-weight: 300;
+          .RobotoCondensed;
+        }
+        .dark-icon{
+          display:none;
+        }
+        &:hover{
+          margin-left: 10px;
+          .dark-icon{
+            display:inline;
+          }
+          .white-icon{
+            display:none;
+          }
+          .name{
+            color:@black;
+          }
+        }
+      }
+    }
+  }
+  .logout{
+    padding-left:35px;
+    .name{
+      margin-left: 13px;
+      color: @white;
+      font-size: 16px;
+      font-weight: 300;
+      .RobotoCondensed;
+    }
+    .dark-icon{
+      display:none;
+    }
+    &:hover{
+      margin-left: 10px;
+      .dark-icon{
+        display:inline;
+      }
+      .white-icon{
+        display:none;
+      }
+      .name{
+        color:@black;
+      }
+    }
   }
 }
 /*-------------------------- General Class Definitions End ----------------*/
