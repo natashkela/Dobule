@@ -420,6 +420,53 @@ input:focus {
 .main-menu .logout:hover .name {
   color: #000000;
 }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 32px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFFFFF;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 20px;
+  border: 2px solid #E5E5E5;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 27px;
+  width: 27px;
+  left: 1px;
+  bottom: 1px;
+  background-color: #FFFFFF;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px 1px #c5c5c5ad;
+}
+input:checked + .slider {
+  background-color: #FFB800;
+  border: 2px solid #FFB800;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  box-shadow: none;
+}
 /*-------------------------- General Class Definitions End ----------------*/
 /*-------------------------- Food Categories Page Start -------------------*/
 .discover-food-container {
@@ -780,6 +827,12 @@ input:focus {
 }
 .gm-bundled-control.gm-bundled-control-on-bottom {
   display: none;
+}
+.open_shipper {
+  position: absolute;
+  z-index: 100;
+  top: 25px;
+  left: 36px;
 }
 /*-------------------------- View On Map Page End -------------------------*/
 /*-------------------------- Single Page Restaurant Start -----------------*/
