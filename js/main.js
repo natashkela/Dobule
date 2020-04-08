@@ -46,7 +46,7 @@ var markerList = [
     {lat: 42.364183, lng:-71.057517},
     {lat: 42.362816, lng:-71.053816}
 ];
-var homeMarker = {lat:42.367741, lng: -71.054977};
+var homeMarker = {lat:42.367382, lng: -71.055033};
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         mapTypeControl: false,
@@ -297,6 +297,111 @@ function initMap() {
         google.maps.event.trigger(map, 'resize');
     })
 }
+function multipleRoute(directionsService, directionsDisplay){
+    console.log(directionsService);
+    directionsDisplayMap = new google.maps.DirectionsRenderer({suppressMarkers:true});
+    directionsDisplayMap.setOptions({
+        polylineOptions: {
+            strokeColor: '#315797',
+            strokeWeight: 5,
+            strokeOpacity:0
+        }
+    });
+    directionsDisplayMap.setMap(map);
+    directionsServiceMap = directionsService;
+    var waypts = [{
+        location:"2 Staniford Street, Boston, MA",
+        stopover:true
+    }]
+    var coordinates = [{lat:42.359236,lng: -71.059393}];
+    var icons = {
+        marker: new google.maps.MarkerImage(
+            // URL
+            './icons/bike_pin.svg',
+            // (width,height)
+            new google.maps.Size(50, 50),
+            // The origin point (x,y)
+            new google.maps.Point(0, 0),
+            // The anchor point (x,y)
+            new google.maps.Point(20, 20),
+            // new google.maps.Size(28, 72)
+        ),
+        eat: new google.maps.MarkerImage(
+            // URL
+            './icons/pin_eat.svg',
+            // (width,height)
+            new google.maps.Size(70, 70),
+            // The origin point (x,y)
+            new google.maps.Point(0, 0),
+            // The anchor point (x,y)
+            new google.maps.Point(35, 35),
+            new google.maps.Size(70, 70)
+        ),
+
+    };
+    directionsService.route({
+        origin: "100 City Hall Plaza, Boston, MA",
+        destination: "71 Charter Street, Boston, MA",
+        waypoints: waypts,
+        optimizeWaypoints: true,
+        travelMode: 'DRIVING'
+    }, function(response, status) {
+        console.log(response);
+        console.log(status);
+        if (status === 'OK') {
+            directionsDisplayMap.setDirections(response);
+            renderDirectionsPolylines(response, map);
+        } else {
+            window.alert('Directions request failed due to ' + status);
+        }
+    });
+    makeMarker({lat:42.361290, lng:-71.063766}, icons.eat, "Route End");
+    for(var i=0;i<coordinates.length;i++){
+        makeMarker(coordinates[i], icons.marker,"Route Stop");
+    }
+}
+function renderDirectionsPolylines(response,map){
+    var bounds = new google.maps.LatLngBounds();
+    var lineSymbol = {
+        path: 'M 0,-1 0,1',
+        strokeOpacity: 1,
+        scale: 4
+    };
+    var polylineOptions = [{
+        icons: [{
+            "icon": {
+                "path": 0,
+                "scale": 1,
+                "fillOpacity": 0.7,
+                "fillColor": "#D63229",
+                "strokeOpacity": 0.8,
+                "strokeColor": "#D63229",
+                "strokeWeight": 3
+            },
+            "repeat": "10px"
+        }],
+        strokeColor: "#000000",
+        strokeOpacity: 0,
+        strokeWeight: 5
+    },{
+        strokeColor: '#315797',
+        strokeWeight: 5
+    }];
+    var legs = response.routes[0].legs;
+    for (i = 0; i < legs.length; i++) {
+        var steps = legs[i].steps;
+        for (j = 0; j < steps.length; j++) {
+            var nextSegment = steps[j].path;
+            var stepPolyline = new google.maps.Polyline(i>0 ? polylineOptions[1] : polylineOptions[0]) ;
+            for (k = 0; k < nextSegment.length; k++) {
+                stepPolyline.getPath().push(nextSegment[k]);
+                bounds.extend(nextSegment[k]);
+            }
+            stepPolyline.setMap(map);
+        }
+    }
+    // map.fitBounds(bounds);
+}
 $(document).ready(function(){
     'use strict';
     if($('#map').length>0){
@@ -320,7 +425,7 @@ $(document).ready(function(){
             // The origin point (x,y)
             new google.maps.Point( 0, 0 ),
             // The anchor point (x,y)
-            new google.maps.Point( 0, 6 ),
+            new google.maps.Point( 30, 30 ),
             //Scaled Size
             new google.maps.Size(60, 60)
         );
@@ -333,6 +438,13 @@ $(document).ready(function(){
             }
             makeMarker(homeMarker, housePin, 'House Pin', true);
         }, 1000);
+    }
+
+    if($('.reach-destination').length > 0){
+        setTimeout(function(){
+            makeMarker(homeMarker, housePin, 'House Pin', true);
+        }, 1000);
+        multipleRoute(new google.maps.DirectionsService, new google.maps.DirectionsRenderer);
     }
 
     $('.delivery-option-left, .delivery-option-right').on('mouseover', function(){
