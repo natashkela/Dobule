@@ -859,7 +859,6 @@ input:checked + .slider:before {
   z-index: 1000;
   width: 100%;
   height: 283px;
-  overflow: scroll;
   padding-bottom: 50px;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
@@ -870,7 +869,7 @@ input:checked + .slider:before {
   .profile-picture{
     margin-left: -37px;
     margin-top: -33px;
-    position: fixed;
+    position: absolute;
     left: 50%;
   }
   .white-bg-container{
@@ -921,6 +920,7 @@ input:checked + .slider:before {
   }
   .invoice-info{
     display: flex;
+    margin-top: -18px;
     justify-content: center;
     .Roboto;
     font-weight:100;
@@ -975,7 +975,7 @@ input:checked + .slider:before {
     align-items: center;
   }
   .item-info-container{
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     .item {
       .RobotoCondensed;
       font-weight:100;

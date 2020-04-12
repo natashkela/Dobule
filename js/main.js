@@ -701,6 +701,7 @@ $(document).ready(function(){
     $('.intro-info .arrow').on('click', function(){
        $(this).find('img').toggleClass('hidden');
        $('.shipper').toggleClass('full-height');
+       $('.info-container').toggleClass('hidden');
     });
 
 

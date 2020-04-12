@@ -919,7 +919,6 @@ input:checked + .slider:before {
   z-index: 1000;
   width: 100%;
   height: 283px;
-  overflow: scroll;
   padding-bottom: 50px;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
@@ -931,7 +930,7 @@ input:checked + .slider:before {
 .shipper .profile-picture {
   margin-left: -37px;
   margin-top: -33px;
-  position: fixed;
+  position: absolute;
   left: 50%;
 }
 .shipper .white-bg-container {
@@ -973,6 +972,7 @@ input:checked + .slider:before {
 }
 .shipper .invoice-info {
   display: flex;
+  margin-top: -18px;
   justify-content: center;
   font-family: 'Roboto', sans-serif !important;
   font-weight: 100;
@@ -1027,7 +1027,7 @@ input:checked + .slider:before {
   align-items: center;
 }
 .shipper .item-info-container {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 .shipper .item-info-container .item {
   font-family: "Roboto Condensed", sans-serif !important;
