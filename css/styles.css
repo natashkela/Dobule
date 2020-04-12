@@ -149,10 +149,13 @@ input:focus {
   padding-top: 67px;
   padding-bottom: 80px;
 }
+.page-content.map {
+  padding-bottom: 69px;
+}
 .bottom-menu {
   position: fixed;
   bottom: 0;
-  z-index: 20;
+  z-index: 5000;
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -882,21 +885,28 @@ input:checked + .slider:before {
   bottom: 0;
   z-index: 1000;
   width: 100%;
-  height: 200px;
+  height: 283px;
   overflow: scroll;
+  padding-bottom: 50px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  transition: height 0.4s ease-out;
+}
+.shipper.full-height {
+  height: 492px;
 }
 .shipper .profile-picture {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-left: -37px;
+  margin-top: -33px;
+  position: fixed;
+  left: 50%;
 }
 .shipper .white-bg-container {
   background-color: #FFFFFF;
-  margin-top: -25px;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   padding: 0 36px;
-  padding-top: 26px;
+  padding-top: 36px;
 }
 .shipper .dashed-border {
   border: 5px solid transparent;
@@ -957,16 +967,44 @@ input:checked + .slider:before {
   justify-content: space-evenly;
 }
 .shipper .btn-container .btn {
+  width: 50%;
   padding: 16px;
-  width: 300px;
   text-align: center;
   border-radius: 35px;
 }
 .shipper .btn-container .msg-btn {
+  margin-right: 10px;
   border: 1px solid #3B5998;
 }
 .shipper .btn-container .call-btn {
+  margin-left: 10px;
   border: 1px solid #D63229;
+}
+.shipper .title-container {
+  padding-bottom: 20px;
+}
+.shipper .title-container .sub-text {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-weight: 200;
+  font-size: 14px;
+}
+.shipper .calculation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shipper .item-info-container {
+  margin-bottom: 50px;
+}
+.shipper .item-info-container .item {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-weight: 100;
+  font-size: 14px;
+}
+.shipper .item-info-container .item .count {
+  margin-right: 20px;
+  font-size: 13px;
+  font-weight: 400;
 }
 /*-------------------------- View On Map Page End -------------------------*/
 /*-------------------------- Single Page Restaurant Start -----------------*/

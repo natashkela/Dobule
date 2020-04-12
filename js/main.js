@@ -8,6 +8,8 @@ document.onreadystatechange = function () {
 };
 var map;
 var requestedMarker;
+var directionsDisplayMap;
+var directionsServiceMap;
 var markers = [];
 function hideMarkers() {
     for (var i = 0; i < markers.length; i++) {
@@ -344,7 +346,6 @@ function initMap() {
     })
 }
 function multipleRoute(directionsService, directionsDisplay){
-    console.log(directionsService);
     directionsDisplayMap = new google.maps.DirectionsRenderer({suppressMarkers:true});
     directionsDisplayMap.setOptions({
         polylineOptions: {
@@ -406,6 +407,14 @@ function multipleRoute(directionsService, directionsDisplay){
         makeMarker(coordinates[i], icons.marker,"Route Stop");
     }
 }
+function multipleRouteHide(){
+    initMap();
+}
+function hideMarkers() {
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(null); //Remove the marker from the map
+    }
+}
 function renderDirectionsPolylines(response,map){
     var bounds = new google.maps.LatLngBounds();
     var lineSymbol = {
@@ -448,6 +457,7 @@ function renderDirectionsPolylines(response,map){
     }
     // map.fitBounds(bounds);
 }
+
 $(document).ready(function(){
     'use strict';
     if($('#map').length>0){
@@ -486,12 +496,24 @@ $(document).ready(function(){
         }, 1000);
     }
 
-    if($('.reach-destination').length > 0){
+    function initReachMapDestination(){
         setTimeout(function(){
             makeMarker(homeMarker, housePin, 'House Pin', true, {dialog:2});
-        }, 1000);
+        }, 0);
         multipleRoute(new google.maps.DirectionsService, new google.maps.DirectionsRenderer);
     }
+
+    $('.open_shipper .slider').on('click', function(){
+        if($(this).parent().find('input').is(':checked')){
+            hideMarkers();
+            multipleRouteHide();
+        }
+        else{
+            initReachMapDestination();
+        }
+        $('.shipper').toggleClass('hidden');
+    });
+
 
     $('.delivery-option-left, .delivery-option-right').on('mouseover', function(){
         $(this).find('.delivery-option-light').removeClass('hidden');
@@ -675,6 +697,11 @@ $(document).ready(function(){
             });
         }
     }
+
+    $('.intro-info .arrow').on('click', function(){
+       $(this).find('img').toggleClass('hidden');
+       $('.shipper').toggleClass('full-height');
+    });
 
 
 });
