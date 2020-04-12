@@ -111,8 +111,8 @@ input:focus {
   top: 0;
   width: 100%;
   height: 67px;
-  background-color: white;
-  z-index: 2;
+  background-color: #fffffff2;
+  z-index: 1000;
 }
 .main-header .dobule-logo {
   flex: 1;
@@ -335,7 +335,7 @@ input:focus {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 10000;
   background-color: #FFB800;
   right: 0;
   bottom: 0;
@@ -918,7 +918,7 @@ input:checked + .slider:before {
   bottom: 0;
   z-index: 1000;
   width: 100%;
-  height: 283px;
+  height: 264px;
   padding-bottom: 50px;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
@@ -932,6 +932,9 @@ input:checked + .slider:before {
   margin-top: -33px;
   position: absolute;
   left: 50%;
+}
+.shipper .profile-picture .dashed-border {
+  border-radius: 30px !important;
 }
 .shipper .white-bg-container {
   background-color: #FFFFFF;
@@ -947,7 +950,8 @@ input:checked + .slider:before {
   border-image-slice: 10%;
   border-image-width: 19px;
   border-image-outset: 0px;
-  border-radius: 30px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: white;
 }
 .shipper .dashed-border-bottom {
