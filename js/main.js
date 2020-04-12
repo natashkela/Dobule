@@ -14,7 +14,7 @@ function hideMarkers() {
         markers[i].setMap(null); //Remove the marker from the map
     }
 }
-function makeMarker( position, icon, title, listener=false) {
+function makeMarker( position, icon, title, listener=false, dialog={}) {
     var marker = new google.maps.Marker({
         position: position,
         map: map,
@@ -24,8 +24,54 @@ function makeMarker( position, icon, title, listener=false) {
     });
     markers.push(marker);
     var addListenerToMarker = function(myMarker){
-        marker.addListener('click', function() {
-            //What happens on marker click
+        //@TODO - Sabrina's picture should be changed, it looks bad
+        var dialog1 = '<div class="dialog2">'+
+            '<div class="absolute-container">'+
+            '<div class="image"><img src="./img/sabrina_map.svg" alt="Sabrina Image"></div>'+
+            '<div class="d-flex justify-content-between margin-top-5">\n' +
+            '<div class="text"><div class="title">Sabrina Lorenstein</div>' +
+            '<div class="address intro-text m-0 font-10">02113; 65 Summer Str.</div>' +
+            '<div class="address intro-text m-0 font-10">Boston, MA</div>' +
+            '</div>' +
+            '</div>'+
+            '</div>';
+
+        var infowindow1 = new google.maps.InfoWindow({
+            content: dialog1
+        });
+
+        var dialog2 = '<div class="dialog1">'+
+                '<div class="absolute-container">'+
+                '<div class="image"><img src="./img/foodoor_deals_1.jpg" alt="Lecasa Image"></div>'+
+                '<div class="d-flex justify-content-between margin-top-5 text-wrapper">\n' +
+            '<div class="text"><div class="title">Le Casa</div><div class="address intro-text font-10">02113; 23 Salem Str. Boston, MA</div></div>' +
+        '<div class="review-container d-flex align-items-center">\n' +
+                '<div class="rating">\n' +
+                '    <span class="fas fa-star active"></span>\n' +
+                '    <span class="fas fa-star active"></span>\n' +
+                '    <span class="fas fa-star active"></span>\n' +
+                '    <span class="fas fa-star active"></span>\n' +
+                '    <span class="fas fa-star active"></span>\n' +
+                '    </div>\n' +
+                '    <span class="intro-text d-flex flex-column justify-content-center font-10 margin-left-10 mt-0">4.9 (2902 ratings)</span>\n' +
+                '</div>' +
+            '</div>'+
+            '</div>'+
+            '</div>';
+
+        var infowindow2 = new google.maps.InfoWindow({
+            content: dialog2
+        });
+
+        marker.addListener('click', function(e) {
+            if(dialog.hasOwnProperty('dialog')) {
+                if(dialog.dialog == 1){
+                    infowindow1.open(map, marker);
+                }
+                else if(dialog.dialog == 2){
+                    infowindow2.open(map, marker);
+                }
+            }
         });
     }
     if(listener){
@@ -355,7 +401,7 @@ function multipleRoute(directionsService, directionsDisplay){
             window.alert('Directions request failed due to ' + status);
         }
     });
-    makeMarker({lat:42.361290, lng:-71.063766}, icons.eat, "Route End");
+    makeMarker({lat:42.361290, lng:-71.063766}, icons.eat, "Route End", true, {dialog:1});
     for(var i=0;i<coordinates.length;i++){
         makeMarker(coordinates[i], icons.marker,"Route Stop");
     }
@@ -434,15 +480,15 @@ $(document).ready(function(){
     if($('.view-on-map').length > 0){
         setTimeout(function(){
             for(var i=0;i<markerList.length;i++){
-                makeMarker(markerList[i],mapPin, 'Map Pin', true);
+                makeMarker(markerList[i],mapPin, 'Map Pin');
             }
-            makeMarker(homeMarker, housePin, 'House Pin', true);
+            makeMarker(homeMarker, housePin, 'House Pin', true, {dialog:1});
         }, 1000);
     }
 
     if($('.reach-destination').length > 0){
         setTimeout(function(){
-            makeMarker(homeMarker, housePin, 'House Pin', true);
+            makeMarker(homeMarker, housePin, 'House Pin', true, {dialog:2});
         }, 1000);
         multipleRoute(new google.maps.DirectionsService, new google.maps.DirectionsRenderer);
     }

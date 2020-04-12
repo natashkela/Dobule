@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>up-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Restaurant" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Reach-Destination-with-slide-up-+-Call" transform="translate(-38.000000, -191.000000)">
+            <g id="drop-down-date-window" transform="translate(-1.000000, 120.000000)">
+                <g id="Top-Icons" transform="translate(37.000000, 65.000000)">
+                    <g id="up-arrow" transform="translate(21.500000, 25.500000) rotate(180.000000) translate(-21.500000, -25.500000) translate(0.000000, 4.000000)">
+                        <g>
+                            <g id="Rectangle_2754" stroke-dasharray="6" transform="translate(21.213000, 21.213203) rotate(45.000000) translate(-21.213000, -21.213203) translate(6.213000, 6.213203)">
+                                <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="30" height="30" rx="4"></rect>
+                                <path d="M4,0.1 L26,0.1 C28.1539105,0.1 29.9,1.84608948 29.9,4 L29.9,26 C29.9,28.1539105 28.1539105,29.9 26,29.9 L4,29.9 C1.84608948,29.9 0.1,28.1539105 0.1,26 L0.1,4 C0.1,1.84608948 1.84608948,0.1 4,0.1 Z" id="Rectangle" stroke="#000000" stroke-width="0.2"></path>
+                            </g>
+                            <g id="double-chevron-down" transform="translate(20.713000, 20.152000) rotate(180.000000) translate(-20.713000, -20.152000) translate(14.713000, 14.652000)" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.7">
+                                <polyline id="Path_14796" points="11.024 5.177 5.762 10.439 0.5 5.177"></polyline>
+                                <polyline id="Path_14797" points="11.024 0.5 5.762 5.762 0.5 0.5"></polyline>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

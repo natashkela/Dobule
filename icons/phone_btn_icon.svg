@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title></title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <text id="text-1" font-family="FontAwesome" font-size="30" font-weight="normal">
+            <tspan x="58" y="41"></tspan>
+        </text>
+        <filter x="-10.4%" y="-8.3%" width="120.8%" height="116.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <filter x="-10.4%" y="-8.3%" width="120.8%" height="116.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Restaurant" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Reach-Destination-with-down-widow" transform="translate(-249.000000, -760.000000)">
+            <g id="drop-down-date-window" transform="translate(-1.000000, 492.000000)">
+                <g id="Call-button" transform="translate(193.000000, 252.000000)">
+                    <g id="">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#text-1"></use>
+                        <use stroke="#F4543E" fill="#FFFFFF" fill-opacity="1" stroke-width="1" stroke-opacity="1" filter="url(#filter-2)" xlink:href="#text-1"></use>
+                        <use stroke="#F4543E" fill="#FFFFFF" fill-opacity="1" stroke-width="1" stroke-opacity="1" filter="url(#filter-3)" xlink:href="#text-1"></use>
+                        <use stroke="#F4543E" stroke-width="1" xlink:href="#text-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -834,6 +834,140 @@ input:checked + .slider:before {
   top: 25px;
   left: 36px;
 }
+.gm-style .gm-style-iw-c {
+  padding: 0px;
+}
+.dialog1,
+.dialog2 {
+  height: 59px;
+}
+.dialog1 .absolute-container,
+.dialog2 .absolute-container {
+  display: flex;
+  height: 100%;
+}
+.dialog1 .absolute-container .image,
+.dialog2 .absolute-container .image {
+  width: 85px;
+}
+.dialog1 .absolute-container .image img,
+.dialog2 .absolute-container .image img {
+  height: 71px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.dialog1 .absolute-container .text-wrapper,
+.dialog2 .absolute-container .text-wrapper {
+  flex-direction: column;
+  margin-left: 39px;
+  justify-content: flex-end !important;
+}
+.dialog1 .absolute-container .text .title,
+.dialog2 .absolute-container .text .title {
+  font-weight: 400;
+}
+.dialog2 {
+  height: 42px;
+}
+.dialog2 .absolute-container .image {
+  width: 68px;
+}
+.dialog2 .absolute-container .image img {
+  height: 54px;
+}
+.shipper {
+  position: absolute;
+  bottom: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 200px;
+  overflow: scroll;
+}
+.shipper .profile-picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shipper .white-bg-container {
+  background-color: #FFFFFF;
+  margin-top: -25px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  padding: 0 36px;
+  padding-top: 26px;
+}
+.shipper .dashed-border {
+  border: 5px solid transparent;
+  border-image: url(../icons/border.svg);
+  border-image-repeat: repeat;
+  border-image-slice: 10%;
+  border-image-width: 19px;
+  border-image-outset: 0px;
+  border-radius: 30px;
+  background-color: white;
+}
+.shipper .dashed-border-bottom {
+  border-bottom: 1px solid grey;
+}
+.shipper .intro-info .title-container {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  margin-top: -44px;
+  align-items: center;
+}
+.shipper .intro-info .title-container .title {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-weight: 300;
+  font-size: 13px;
+}
+.shipper .intro-info .title-container .name {
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-size: 20px;
+  font-weight: 400;
+}
+.shipper .invoice-info {
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 100;
+  font-size: 13px;
+}
+.shipper .invoice-info span {
+  font-weight: 400;
+}
+.shipper .icons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  font-family: "Roboto Condensed", sans-serif !important;
+  font-weight: 100;
+  padding-bottom: 20px;
+  font-size: 10px;
+}
+.shipper .icons-container .icon {
+  text-align: center;
+}
+.shipper .btn-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.shipper .btn-container .btn {
+  padding: 16px;
+  width: 300px;
+  text-align: center;
+  border-radius: 35px;
+}
+.shipper .btn-container .msg-btn {
+  border: 1px solid #3B5998;
+}
+.shipper .btn-container .call-btn {
+  border: 1px solid #D63229;
+}
 /*-------------------------- View On Map Page End -------------------------*/
 /*-------------------------- Single Page Restaurant Start -----------------*/
 .facts-listing {

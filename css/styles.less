@@ -779,6 +779,151 @@ input:checked + .slider:before {
   top: 25px;
   left: 36px;
 }
+.gm-style .gm-style-iw-c{
+  padding:0px;
+}
+.dialog1,
+.dialog2{
+  height: 59px;
+  .absolute-container{
+    display: flex;
+    height: 100%;
+    .image{
+      width: 85px;
+      img{
+        height: 71px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    .text-wrapper{
+      flex-direction: column;
+      margin-left: 39px;
+      justify-content: flex-end!important;
+    }
+    .text{
+      .title{
+        font-weight: 400;
+      }
+      .address{
+
+      }
+    }
+  }
+}
+.dialog2{
+  height:42px;
+  .absolute-container {
+    .image {
+      width:68px;
+      img {
+        height: 54px;
+      }
+    }
+  }
+}
+.shipper{
+  position: absolute;
+  bottom: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 200px;
+  overflow: scroll;
+  .profile-picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .white-bg-container{
+    background-color: @white;
+    margin-top: -25px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    padding: 0 36px;
+    padding-top: 26px;
+  }
+  .dashed-border{
+    border: 5px solid transparent;
+    border-image: url(../icons/border.svg);
+    border-image-repeat: repeat;
+    border-image-slice: 10%;
+    border-image-width: 19px;
+    border-image-outset: 0px;
+    border-radius: 30px;
+    background-color: white;
+  }
+  .dashed-border-bottom{
+    //@TODO - REPLACE BORDER DASHED WITH NICE BORDER BOTTOM PICTURE
+    //border-bottom: 5px solid transparent;
+    //border-image: url(../icons/border-dashed-bottom.svg);
+    //border-image-repeat: repeat;
+    //border-image-slice: 10%;
+    //border-image-width: 19px;
+    //border-image-outset: 0px;
+    border-bottom:1px solid grey;
+  }
+  .intro-info{
+    .title-container{
+      flex-direction: column;
+      justify-content: center;
+      display: flex;
+      margin-top: -44px;
+      align-items: center;
+      .title{
+        .RobotoCondensed;
+        font-weight:300;
+        font-size:13px;
+      }
+      .name{
+        .RobotoCondensed;
+        font-size:20px;
+        font-weight:400;
+      }
+    }
+  }
+  .invoice-info{
+    display: flex;
+    justify-content: center;
+    .Roboto;
+    font-weight:100;
+    font-size:13px;
+    span{
+      font-weight:400;
+    }
+  }
+  .icons-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    .icon{
+      text-align: center;
+    }
+    .RobotoCondensed;
+    font-weight:100;
+    padding-bottom:20px;
+    font-size:10px;
+  }
+  .btn-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    .btn{
+      padding: 16px;
+      width: 300px;
+      text-align: center;
+      border-radius: 35px;
+    }
+    .msg-btn{
+      border: 1px solid @purple;
+    }
+    .call-btn{
+      border:1px solid @red;
+    }
+  }
+}
 /*-------------------------- View On Map Page End -------------------------*/
 
 /*-------------------------- Single Page Restaurant Start -----------------*/

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="9px" viewBox="0 0 8 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Restaurant" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Reach-Destination-with-down-widow" transform="translate(-54.000000, -695.000000)">
+            <g id="drop-down-date-window" transform="translate(-1.000000, 492.000000)">
+                <g id="Delivery-process-icons" transform="translate(52.000000, 162.000000)">
+                    <g id="Group" transform="translate(3.000000, 41.500000)">
+                        <circle id="Oval" fill="#FFB800" cx="3.8" cy="3.8" r="3.5"></circle>
+                        <g id="clock" fill="#000000">
+                            <g id="time">
+                                <path d="M3.83066667,-4.25733523e-16 C1.71504788,-4.25733523e-16 9.25185854e-16,1.71504788 9.25185854e-16,3.83066667 C9.25185854e-16,5.94628545 1.71504788,7.66133333 3.83066667,7.66133333 C5.94628545,7.66133333 7.66133333,5.94628545 7.66133333,3.83066667 C7.6591286,1.71596179 5.94537154,0.00220473321 3.83066667,-4.25733523e-16 Z M3.83066667,7.21 C1.96394421,7.21 0.450666667,5.69672245 0.450666667,3.83 C0.450666667,1.96327755 1.96394421,0.45 3.83066667,0.45 C5.69738912,0.45 7.21066667,1.96327755 7.21066667,3.83 C7.20882919,5.69596081 5.69662748,7.20816252 3.83066667,7.21 L3.83066667,7.21 Z M6.234,4.056 L6.234,4.50666667 L3.53,4.50666667 L3.53,2.25333333 L3.98066667,2.25333333 L3.98066667,4.05333333 L6.234,4.056 Z" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
